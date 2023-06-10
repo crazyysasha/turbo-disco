@@ -7,10 +7,20 @@ const draftTask = ref('');
 
 const onFormSubmitted = (event) => {
   console.log(draftTask.value);
-  tasks.value.push(draftTask.value);
+  tasks.value.push({ 
+    text: draftTask.value, 
+    id: (tasks.value[tasks.value.length - 1]?.id ?? 0) + 1 
+  });
   draftTask.value = '';
 }
 
+
+const remove = (id) => {
+  const index = tasks.value.findIndex((value) => {
+    return id == value.id;
+  })
+  tasks.value.splice(index, 1);
+}
 </script>
 
 
@@ -20,8 +30,8 @@ const onFormSubmitted = (event) => {
   </h1>
 
   <ol>
-    <li v-for="task in tasks">
-      {{ task }} <button class="bg-red-500">o'chirish</button>
+    <li v-for="(task) in tasks">
+      {{ task.text }} <button class="bg-red-500" v-on:click="remove(task.id)">o'chirish</button>
     </li>
   </ol>
 
