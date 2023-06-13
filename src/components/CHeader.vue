@@ -14,6 +14,7 @@ defineProps({
         <nav class="flex gap-5">
             <a href="">home</a>
             <a href="" v-show="isAuthed">profile</a>
+            <!-- logout -->
         </nav>
     </header>
 </template>

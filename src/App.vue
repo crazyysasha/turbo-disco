@@ -5,6 +5,8 @@ import CLoginForm from './components/CLoginForm.vue'
 
 const isAuthed = ref(false);
 
+// onLogout  => isAuthed.value = false
+
 const onLogin = (email, password) => {
   if (email == 'admin@domain.com' && password == 'pass') {
     isAuthed.value = true;
