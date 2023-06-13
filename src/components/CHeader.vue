@@ -1,12 +1,8 @@
 <script setup>
+import { useAuth } from '../composables/auth';
 
-defineProps({
-    isAuthed: {
-        type: Boolean,
-        required: true,
-        default: false,
-    }
-});
+
+const { isAuthed } = useAuth();
 </script>
 <template>
     <header class="container mx-auto px-5 py-4 flex justify-between">

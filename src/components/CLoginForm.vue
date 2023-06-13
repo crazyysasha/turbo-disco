@@ -1,14 +1,14 @@
 <script setup>
 import { ref } from 'vue';
+import { useAuth } from '../composables/auth';
 
 
-const emit = defineEmits(['on-submitted']);
-
+const { onLogin, isAuthed } = useAuth();
 
 const email = ref('');
 const password = ref('');
 const onSubmit = () => {
-    emit('on-submitted', email.value, password.value);
+    onLogin(email.value, password.value);
     console.log(email.value, password.value);
 }
 </script>
@@ -22,6 +22,7 @@ const onSubmit = () => {
         </div>
         <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
             <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+                <p v-show="isAuthed">ruyhatdan utdi</p>
                 <form class="space-y-6" action="#" method="POST" @submit.prevent="onSubmit">
                     <div>
                         <label for="email" class="block text-sm font-medium text-gray-700">
