@@ -14,11 +14,15 @@ const onLogin = (email, password) => {
     alert('parol yoki login xato!');
   }
 }
+
+const onLogout = () => {
+  isAuthed.value = false;
+}
 </script>
 
 <template>
   <div class="flex flex-col min-h-screen bg-gray-100">
-    <CHeader :is-authed="isAuthed"></CHeader>
+    <CHeader :is-authed="isAuthed" @on-logout="onLogout"></CHeader>
     <CLoginForm v-if="!isAuthed" @on-submitted="onLogin"></CLoginForm>
     <p class="text-center text-3xl text-green-700" v-else>welcome</p>
   </div>
