@@ -1,14 +1,20 @@
 <script setup>
 import { ref } from 'vue';
 import { useAuth } from '../composables/auth';
+import { useRouter } from 'vue-router';
 
 
 const { onLogin, isAuthed } = useAuth();
 
 const email = ref('');
 const password = ref('');
+
+const router = useRouter();
+// const {push} = useRouter();
 const onSubmit = () => {
     onLogin(email.value, password.value);
+    router.push('/');
+    // push('/');
     console.log(email.value, password.value);
 }
 </script>
