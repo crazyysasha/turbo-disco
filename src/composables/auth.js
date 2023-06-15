@@ -12,5 +12,8 @@ export function useAuth() {
         }
     }
 
-    return { isAuthed, onLogin };
+    const onLogout = () => {
+        isAuthed.value = false;
+    }
+    return { isAuthed, onLogin, onLogout };
 }

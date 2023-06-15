@@ -2,7 +2,7 @@
 import { useAuth } from '../composables/auth';
 
 
-const { isAuthed } = useAuth();
+const { isAuthed, onLogout } = useAuth();
 </script>
 <template>
     <header class="container mx-auto px-5 py-4 flex justify-between">
@@ -10,7 +10,7 @@ const { isAuthed } = useAuth();
         <nav class="flex gap-5">
             <a href="">home</a>
             <a href="" v-show="isAuthed">profile</a>
-            <!-- logout -->
+            <a href="" @click.prevent="onLogout" v-if="isAuthed">logout</a> 
         </nav>
     </header>
 </template>
