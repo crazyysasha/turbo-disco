@@ -1,8 +1,16 @@
 <script setup>
+import ChatView from './ChatView.vue'
 </script>
 
 <template>
-  <main>
-    Home
+  <main >
+  <ChatView></ChatView>
   </main>
+ 
 </template>
+
+
+
+<style>
+
+</style>
