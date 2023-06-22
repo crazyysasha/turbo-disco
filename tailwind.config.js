@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     'index.html',
-    './src/**/*.{vue,js}'
+    './src/***/*.{vue,js}'
   ],
   presets: [],
   darkMode: 'media', // or 'class'
