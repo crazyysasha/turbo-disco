@@ -1,10 +1,10 @@
-import { createRouter,createMemoryHistory } from "vue-router";
-import ChatViev from "./views"
+import { createRouter,createMemoryHistory, createWebHistory } from "vue-router";
+import ChatView from "./views"
 
 export default createRouter ({
-    history: createMemoryHistory (), 
+    history: createWebHistory (), 
     routes: [
-        { path: 'chat', vievs:ChatViev}
+        { path: 'chat', views:ChatView}
         
     ]
 })

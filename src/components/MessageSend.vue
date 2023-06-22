@@ -18,12 +18,12 @@
 
 <style>
 .input{
-  width: 1300px;
+
   border: solid;
   border-radius: 9999px;
 }
 .send{
-  margin-top: -40px;
+  
   margin-left: auto;
   display: flex;
 }
@@ -31,6 +31,5 @@
 gap:10px ;
 display: flex;
 margin-left: 1140px;
-margin-top: -40px;
 }
 </style>

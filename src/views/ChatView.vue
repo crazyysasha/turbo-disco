@@ -2,7 +2,6 @@
 import Header from '../components/Header.vue';
 import message_list from '../components/message_list.vue';
 import message_send from '../components/message_send.vue';
-import Message_list from '../components/message_list.vue';
 
 </script>
 <template>
