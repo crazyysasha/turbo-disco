@@ -1,7 +1,7 @@
 <script setup>
 import Header from '../components/Header.vue';
-import message_list from '../components/MessageList.vue';
-import message_send from '../components/MessageSend.vue';
+import MessageList from '../components/MessageList.vue';
+import MessageSend from '../components/MessageSend.vue';
 
 </script>
 <template>
@@ -9,7 +9,7 @@ import message_send from '../components/MessageSend.vue';
     <div>
       <!-- users list component -->
     </div>
-    <div>
+    <div class="">
     <Header></Header>
     <MessageList></MessageList>
     <MessageSend></MessageSend>
