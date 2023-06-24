@@ -19,7 +19,7 @@ defineProps({
 </script>
 
 <template>
-    <div >
+    <div class="flex flex-col items-center gap-3">
         <img :src="logo" alt="Phonix">
         <h1 class="text-2xl font-bold text-white">{{ name }} </h1>
         <p class="text-xl font-bold text-white ">{{slogan}}</p>
