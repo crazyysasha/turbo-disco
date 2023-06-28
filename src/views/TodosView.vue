@@ -2,8 +2,7 @@
 import { ref } from 'vue';
 import { useTodosStore } from '../stores/todos.js';
 const store = useTodosStore();
-
-const title = ref('');
+const title= ref('');
 </script>
 
 <template>
