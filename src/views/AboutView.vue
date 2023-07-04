@@ -1,15 +1,16 @@
+<script setup>
+import { ref } from 'vue';
+import CInput from '../components/ui/forms/CInput.vue';
+
+const input = ref('');
+</script>
+
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div>
+    <!-- <input type="text" v-model="input"> -->
+    <CInput v-model="input"></CInput>
+    <span class="dark:text-white">{{ input }}</span>
   </div>
 </template>
 
-<style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
-}
-</style>
+<style></style>
