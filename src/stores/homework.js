@@ -1,5 +1,4 @@
 import {defineStore} from 'pinia';
-import { transformWithEsbuild } from 'vite';
 import {ref} from 'vue';
 
 
@@ -42,11 +41,15 @@ export const DohomeworkStore=defineStore('homework',()=>{
         })
     }
     function update(title){
-        answer.value.push({
+        answer.value.splice({
             id:this.id,
             title,
             isCompleted:false
         })
-    }  
+    }
+
+    
+    
+
     return{answer,create,toggle,remove,update}
 })

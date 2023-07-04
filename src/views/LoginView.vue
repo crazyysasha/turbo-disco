@@ -17,7 +17,8 @@ const authInfo = reactive({
 
 const buttonsettings = reactive({
     login: 'Login',
-    signup: 'Signup'
+    signup: 'Signup',
+    Url:'http://localhost:5173/homework'
 
 })
 
