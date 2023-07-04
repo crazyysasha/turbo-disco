@@ -2,7 +2,7 @@
 import { ref, reactive } from 'vue'
 import LogocompanyInfo from '../componites/LogocompanyInfo.vue';
 import AuthInfo from '../componites/AuthInfo.vue'
-import ButtonView from '../componites/buttonView.vue';
+import ButtonView from '../componites/ButtonView.vue';
 const companyinfo = reactive({
     logo: './src/assets/images/temp/logo.svg',
     name: 'HASH TECH',
@@ -18,9 +18,11 @@ const authInfo = reactive({
 const buttonsettings = reactive({
     login: 'Login',
     signup: 'Signup',
-    Url:'http://localhost:5173/homework'
+    Url: document.location.origin + '/homework'
 
 })
+
+
 
 </script>
 

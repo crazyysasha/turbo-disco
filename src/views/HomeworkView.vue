@@ -38,11 +38,12 @@ const updateTitle = ref('');
                         </button>
                     </div>
                     <div v-else>
-
-                        <textarea v-model="updateTitle"></textarea>
-                        <button @click="store.update(updateId, updateTitle); updateId = null">
-                            save
-                        </button>
+                        <form @submit.prevent="store.update(updateId, updateTitle); updateId = null">
+                            <input v-model="updateTitle">
+                            <button>
+                                save
+                            </button>
+                        </form>
                     </div>
                 </li>
             </ul>
