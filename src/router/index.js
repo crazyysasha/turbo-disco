@@ -41,6 +41,11 @@ const router = createRouter({
       path:'/homework',
       name:'homework',
       component:()=> import('../views/HomeworkView.vue')
+    },
+    {
+      path:'/Auth',
+      name:'Authorization',
+      component:()=> import('../views/IndependetView.vue')
     }
   ]
 })

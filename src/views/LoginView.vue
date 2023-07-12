@@ -15,12 +15,13 @@ const authInfo = reactive({
     Passrecovery: 'Forgot password?',
 })
 
-const buttonsettings = reactive({
-    login: 'Login',
-    signup: 'Signup',
-    Url: document.location.origin + '/homework'
-
-})
+// const buttonsettings = reactive({
+    // login: 'Login',
+    // signup: 'Signup',
+    // Url: document.location.origin + '/homework'
+// 
+// })
+const Auth=ref(false)
 
 
 
@@ -29,7 +30,10 @@ const buttonsettings = reactive({
 <template>
     <div class="bg-[#301B52] min-h-screen flex items-center justify-center">
         <div class="container mx-auto px-5 flex justify-around items-center">
-            <LogocompanyInfo :="companyinfo"></LogocompanyInfo>
+            <LogocompanyInfo :="companyinfo" ></LogocompanyInfo>
+            <transition>
+                <p :class="Auth"> ddd</p>
+            </transition>
             <form action="" class="bg-white rounded-2xl w-64 aspect-square">
                 <h2 class="text-center font-bold font-Roboto">Login</h2>
                 <AuthInfo :="authInfo"></AuthInfo>

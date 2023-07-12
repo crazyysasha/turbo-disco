@@ -10,10 +10,11 @@ defineProps({
         required: true,
         default: 'Signup'
     },
-    Url: {
-        required: true,
-        default: document.location.origin + '/homework'
-    }
+    
+    // Url: {
+        // required: true,
+        // default: document.location.origin + '/homework'
+    // }
 
 })
 
@@ -21,7 +22,7 @@ defineProps({
 <template>
     <div class="flex justify-center gap-6">
         <button class="bg-[#301B52] rounded-2xl text-white font-Roboto w-20 hover:bg-lime-700">
-            <a :href="Url">{{ login
+            <a href="">{{ login
             }}</a>
         </button>
         <button class="bg-[#DB0916] rounded-2xl text-white font-Roboto w-20">{{ signup }}</button>
